@@ -357,6 +357,13 @@ syscfg.defs:
         restrictions:
             - '(BLE_VERSION >= 53) if 1'
 
+    BLE_LL_ADV_CODING_SELECTION:
+        description: >
+            Enables support Advertising Coding Selection.
+        value: 0
+        restrictions:
+            - '(BLE_VERSION >= 54) if 1'
+
     BLE_LL_PERIODIC_ADV_SYNC_BIGINFO_REPORTS:
         description: >
             This option is used to enable/disable support for
@@ -671,7 +678,7 @@ syscfg.vals.'BLE_ISO_BROADCAST_SOURCE || BLE_ISO_BROADCAST_SINK':
 
 syscfg.vals.BLE_LL_ISO_BROADCASTER:
     BLE_LL_CFG_FEAT_LE_ENCRYPTION: 1
-    BLE_LL_STACK_SIZE: 180
+    BLE_LL_STACK_SIZE: 200
 
 # Enable vendor event on assert in standalone build to make failed assertions in
 # controller code visible when connected to external host
